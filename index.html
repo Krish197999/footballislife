@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="project.css">
+
+    <title>Football's Highest Scorers</title>
+    <style>
+*{
+    background-color: #333;
+}
+.body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+.header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+h1 {
+    margin: 0;
+}
+h2 {
+    color: #333;
+}
+.button {
+    background-color: lightblue;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Add a smooth transition effect */
+}
+
+.button:hover {
+    background-color: #4682B4; /* Change the background color on hover */
+    color: white; /* Change the text color on hover */
+}
+
+.advert-button {
+    background-color: yellow;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Add a smooth transition effect */
+}
+
+.advert-button:hover {
+    background-color: beige; /* Change the background color on hover */
+    color: black; /* Change the text color on hover */
+}
+
+
+.pinterest-button {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Add a smooth transition effect */
+}
+
+.pinterest-button:hover {
+    background-color: #e46a6a; /* Change the background color on hover (you can adjust the color) */
+    color: black; /* Change the text color on hover (you can adjust the color) */
+}
+
+.young-talents, .top-scorers {
+    margin-top: 20px;
+}
+.talent {
+    border: 4px solid #D6FF08;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #D6FF08;
+    border-radius: 22px;
+}
+.talent img {
+    max-width: 75%;
+    height: auto;
+}
+
+.heading{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:35px ;
+    color: #D6FF08;
+}
+
+.mainheading {
+    text-align: center;  
+    font-size: 50px;
+    color: #D6FF08;
+}
+
+
+.title-bar {
+            background-color: #333;
+            color: #D6FF08;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Center the title text */
+        .title-text {
+            font-size: 74px;
+            margin: 0;
+        }
+
+        /* Search container */
+        .search-container {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* Search input */
+        .search-bar {
+            padding: 10px 20px; /* Adjust padding for better appearance */
+            width: 250px; /* Set a specific width */
+            border: none;
+            border-radius: 25px; /* Rounded border */
+            background-color: #D6FF08; /* Background color */
+            color: black; /* Font color */
+            font-size: 16px;
+            transition: width 0.4s ease-in-out; /* Add transition for smooth animation */
+        }
+
+        /* Search input focus */
+        .search-bar:focus {
+            outline: none; /* Remove default focus outline */
+            width: 300px; /* Expand the width on focus */
+        }
+
+        /* Search button */
+        .search-button {
+            padding: 10px 20px;
+            margin-left: -40px; /* Adjust margin to align with the input */
+            border: none;
+            border-radius: 25px; /* Rounded border */
+            background-color: beige;
+            color: black;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Search button hover */
+        .search-button:hover {
+            background-color: #4682B4;
+            color: white;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1500px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: black;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+
+        .young {
+            background-color: black;
+            color: #D6FF08;
+            padding: 20px 30px;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 2px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s; /* Add a smooth transition effect */
+        }
+
+        /* Hover effect for buttons */
+        .young:hover {
+            background-color: #D6FF08; /* Change the background color on hover (you can adjust the color) */
+            color: black; /* Change the text color on hover (you can adjust the color) */
+        }
+
+.team {
+    border: 2px solid red;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 10px;
+    color: #D6FF08; /* Change the font color to green */
+}
+
+
+.quiz-button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #D6FF08;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.quiz-button:hover {
+    transform: scale(1.1);
+}
+.search-results {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .title-text {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 48px;
+            color: #D6FF08;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-align: center;
+            margin: 0;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="title-bar">
+        <h1 class="title-text">GoalHive Network</h1>
+        <!-- Search container within the title bar -->
+        <div class="search-container">
+            <form action="https://www.google.com/search" method="GET" target="_blank">
+                <input type="text" name="q" class="search-bar" placeholder="Search...">
+                <input type="submit" value="Search" class="search-button">
+            </form>
+        </div>
+    </div>
+    </div>
+
+    <header>
+    </header>
+    <div class="container" style="background-color: #333;">
+        <h2 class="heading">Top Football Scorers of All Time</h2>
+        <div class="top-scorers">
+            <div class="talent" style="background-color: #333;">
+                <!-- Adding an image map to Cristiano Ronaldo's image -->
+                <img class="CR7" src="https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/bltf91a2730105200bb/6541405148c2a6040afc7225/GOAL_-_Blank_WEB_-_Facebook_-_2023-10-31T175708.458.png?auto=webp&format=pjpg&width=3840&quality=60" alt="Cristiano Ronaldo" usemap="#ronaldo-map">
+                <map name="ronaldo-map">
+                    <area shape="rect" coords="0,0,3840,2160" alt="Cristiano Ronaldo Wikipedia" href="https://www.instagram.com/cristiano/?hl=en" target="_blank">
+                </map>
+                <h3><a href="https://en.wikipedia.org/wiki/Cristiano_Ronaldo" target="_blank" style="color: #D6FF08;">Cristiano Ronaldo (GOAT)</a></h3>
+                <p style="color: #D6FF08;">Goals: 859</p>
+                <p style="color: #D6FF08;">Club: Al Nassr</p>
+                <a href="cristiano.html" class="advert-button learn-more-button">Learn More</a>
+            </div>
+            <br>
+            <br>
+        </div>
+        <div class="talent">
+            <img src="https://hips.hearstapps.com/hmg-prod/images/lionel-messi-celebrates-after-their-sides-third-goal-by-news-photo-1686170172.jpg"
+                alt="Lionel Messi" usemap="#messi-map">
+            <map name="messi-map">
+                <area shape="rect" coords="0,0,3840,2160" alt="Lionel Messi Wikipedia" href="https://www.instagram.com/leomessi/?hl=en"
+                    target="_blank">
+            </map>
+            <h3><a href="https://en.wikipedia.org/wiki/Lionel_Messi" target="_blank" style="color: #D6FF08;">Lionel Messi(Robber)</a>
+            </h3>
+            <p style="color: #D6FF08;">Goals: 839</p>
+            <p style="color: #D6FF08;">Club: Burger League FC</p>
+            <a href="messi.html" class="advert-button learn-more-button">Learn More</a>
+        </div>
+    
+        <br>
+        <br>
+    
+        <div class="talent">
+            <img src="https://static.dw.com/image/61527609_605.webp" alt="Pelé" usemap="#pele-map">
+            <map name="pele-map">
+                <area shape="rect" coords="0,0,3840,2160" alt="Pelé Wikipedia" href="https://en.wikipedia.org/wiki/Pel%C3%A9" target="_blank">
+            </map>
+            <h3><a href="https://en.wikipedia.org/wiki/Pel%C3%A9" target="_blank" style="color: #D6FF08;">Pelé</a></h3>
+            <p style="color: #D6FF08;">Goals: 757</p>
+            <p style="color: #D6FF08;">Club: Retired</p>
+            <a href="pele.html" class="advert-button learn-more-button">Learn More</a>
+        </div>
+    
+        <br>
+        <br>
+    
+        <div class="talent">
+            <img src="https://i0.wp.com/thesefootballtimes.co/wp-content/uploads/2013/07/41dd165d-9d9e-4645-881e-65ef3551e9dc.jpg?fit=1000%2C795&ssl=1"
+                alt="Josef Bican" usemap="#bican-map">
+            <map name="bican-map">
+                <area shape="rect" coords="0,0,3840,2160" alt="Josef Bican Wikipedia" href="https://en.wikipedia.org/wiki/Josef_Bican"
+                    target="_blank">
+            </map>
+            <h3><a href="https://en.wikipedia.org/wiki/Josef_Bican" target="_blank" style="color: #D6FF08;">Josef Bican</a>
+            </h3>
+            <p style="color: #D6FF08;">Goals: 805</p>
+            <p style="color: #D6FF08;">Club: Retired</p>
+            <a href="bican.html" class="advert-button learn-more-button">Learn More</a>
+        </div>    
+
+        <a href="nextpage.html" class="young">Best Teams of All Time</a>
+        <a href="young.html" class="young">Young Talents</a>
+        <a href="ronnymessi.html" class="young">Ronaldo vs Messi</a>
+        <a href="quiz.html" class="young">Click here to test your football knowledge</a>
+    </div>
+    <script>
+        function filterTalents() {
+            const input = document.getElementById('searchInput').value.toUpperCase();
+            const talents = document.getElementsByClassName('talent');
+
+            for (let i = 0; i < talents.length; i++) {
+                const title = talents[i].getAttribute('data-title').toUpperCase();
+                if (title.indexOf(input) > -1) {
+                    talents[i].style.display = '';
+                } else {
+                    talents[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+    
+</body>
+</html>
+
+
+

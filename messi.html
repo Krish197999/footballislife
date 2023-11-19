@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lionel Messi</title>
+    <style>
+        body {
+            background-color: black;
+            font-size: 20px;
+            color: beige;
+            padding-bottom: 50px;
+        }
+        h1 {
+            text-align: center;
+            border-bottom: 8px solid rebeccapurple;
+            padding-bottom: 30px;
+            padding: auto;
+        }
+        .image-container {
+            text-align: center;
+        }
+        
+        .image-container img {
+            max-width: 50%;
+            border: 7px solid #D6FF08;
+            border-radius: 20px;
+        }
+
+        .info {
+            text-align: center;
+            margin: 20px;
+        }
+
+        /* Dropdown section styles */
+        .dropdown {
+            text-align: center;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .dropdown select {
+            padding: 10px;
+            border: 2px solid #D6FF08;
+            border-radius: 5px;
+            background-color: black;
+            color: beige;
+            font-size: 16px;
+            width: 250px;
+            transition: border-color 0.3s;
+        }
+
+        .dropdown select:hover {
+            border-color: rebeccapurple; /* Highlight border on hover */
+        }
+
+        /* Content section styles */
+        .club-info {
+            text-align: center;
+            margin-top: 20px;
+            display: none; /* Hide club info by default */
+        }
+
+        .club-info img {
+            max-width: 50%;
+        }
+
+        /* Styling for the back button */
+        .back-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-button a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #D6FF08;
+            color: black;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .back-button a:hover {
+            background-color: #444;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lionel Messi</h1>
+
+    <div class="image-container">
+        <img src="https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/bltf7695f98c1f01bd9/62cbfb91c9db8842cf76cb5b/GHP_MESSI-BOOTS_16-9.jpg?auto=webp&format=pjpg&width=3840&quality=60" alt="Lionel Messi">
+    </div>
+
+    <div class="info">
+        <h2>About Lionel Messi</h2>
+        <p>Lionel Messi, often regarded as one of the greatest football players of all time, is an Argentine forward known for his exceptional dribbling skills and goal-scoring prowess.</p>
+        <p>He spent the majority of his career with FC Barcelona before joining Paris Saint-Germain (PSG). </p>
+        <p>Messi has won numerous Ballon d'Or awards and holds records for the most goals in a calendar year.</p>
+    </div>
+
+    <!-- Dropdown sections -->
+    <div class="dropdown">
+        <select id="club-dropdown">
+            <option value="none">Select a Club</option>
+            <option value="fc-barcelona">FC Barcelona</option>
+            <option value="paris-saint-germain">Paris Saint Germain</option>
+            <option value="inter-miami">Inter Miami</option>
+            <option value="argentina">Argentina</option>
+        </select>
+    </div>
+
+    <div class="club-info" id="fc-barcelona-info">
+        <img src="https://s.france24.com/media/display/451ed2b8-eed6-11ea-afdd-005056bf87d6/w:980/p:16x9/messi-1805.jpg" alt="FC Barcelona">
+        <h3>FC Barcelona</h3>
+        <p>Matches Played: 778</p>
+        <p>Goals Scored: 672</p>
+        <p>Trophies Earned: 15</p>
+        <!-- Add more information as needed -->
+    </div>
+
+    <div class="club-info" id="paris-saint-germain-info">
+        <img src="https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/blt14d22b40a0e78a81/641474d74dbb496adec2faeb/GOAL_-_Blank_WEB_-_Facebook_(1).jpg?auto=webp&format=pjpg&width=3840&quality=60" alt="Paris Saint Germain">
+        <h3>Paris Saint Germain</h3>
+        <p>Matches Played: 75</p>
+        <p>Goals Scored: 32</p>
+        <p>Trophies Earned: 4</p>
+        <!-- Add more information as needed -->
+    </div>
+
+    <div class="club-info" id="inter-miami-info">
+        <img src="https://images.mlssoccer.com/image/private/t_q-best/prd-league/zefgx4vmpsvfchbc431n.jpg" alt="Inter Miami">
+        <h3>Inter Miami</h3>
+        <p>Matches Played: 13</p>
+        <p>Goals Scored: 11</p>
+        <p>Trophies Earned: 0</p>
+        <!-- Add more information as needed -->
+    </div>
+
+    <div class="club-info" id="argentina-info">
+        <img src="https://e0.365dm.com/22/12/2048x1152/skysports-lionel-messi-argentina_6000508.jpg" alt="Argentina">
+        <h3>Argentina</h3>
+        <p>Matches Played: 178</p>
+        <p>Goals Scored: 106</p>
+        <p>Trophies Earned: 3</p>
+        <!-- Add more information as needed -->
+    </div>
+
+    <div class="back-button">
+        <a href="project.html">Back</a>
+    </div>
+
+    <script>
+        // JavaScript to show/hide club info based on dropdown selection
+        document.getElementById("club-dropdown").addEventListener("change", function() {
+            const selectedClub = this.value;
+            const clubInfos = document.querySelectorAll(".club-info");
+            
+            clubInfos.forEach((clubInfo) => {
+                clubInfo.style.display = "none"; // Hide all club info sections
+            });
+            
+            if (selectedClub !== "none") {
+                document.getElementById(selectedClub + "-info").style.display = "block"; // Show the selected club info
+            }
+        });
+    </script>
+</body>
+</html>

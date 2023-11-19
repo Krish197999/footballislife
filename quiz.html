@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Football Logo Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 220vh;
+            text-align: center;
+            text-decoration: dashed;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: x-large;
+            color: #D6FF08; /* Question color */
+        }
+
+        .quiz-container {
+            width: 70%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: black;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #D6FF08;
+            font-size: 36px; /* Increased font size */
+            font-weight: bold;
+            text-transform: uppercase;
+            border: 2px solid #D6FF08; /* Added red border */
+            padding: 10px; /* Padding to make it fancy */
+            border-radius: 50px; /* Rounded corners */
+        }
+
+        .question {
+            margin-bottom: 30px;
+        }
+
+        img {
+            max-width: 50%;
+            height: auto;
+            display: block;
+            margin: 0 auto 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+        }
+
+        .options label {
+            display: block;
+            margin-bottom: 10px;
+            color: bisque; /* Options color */
+        }
+
+        .submit-btn {
+            padding: 15px 30px; /* Increased padding */
+            background-color: #D6FF08;
+            color: #000000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 20px; /* Larger font size */
+            text-transform: uppercase;
+        }
+
+        .submit-btn:hover {
+            background-color: grey;
+        }
+
+        #result {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 24px;
+            color: #D6FF08;
+        }
+        .byebyebutton {
+    background-color: black;
+    color: #D6FF08;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Add a smooth transition effect */
+}
+    </style>
+</head>
+
+<body>
+    <div class="quiz-container">
+        <br>
+        <br>
+        <br>
+        <h1>Football Logo Quiz</h1>
+        <br>
+        <br>
+        <br>
+        <form id="quizForm">
+            <div class="question">
+                <p>1. What team does this logo belong to?</p>
+                <img src="https://logos-world.net/wp-content/uploads/2020/06/Real-Madrid-symbol.png" alt="Logo 1">
+                <div class="options">
+                    <label><input type="radio" name="q1" value="a">FC Barcelona</label>
+                    <label><input type="radio" name="q1" value="b"> Real Madrid</label>
+                    <label><input type="radio" name="q1" value="c">Manchester United</label>
+                </div>
+            </div>
+            <br>
+            <div class="question">
+                <p>2. Identify the team associated with this logo:</p>
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/1200px-FC_Barcelona_%28crest%29.svg.png" alt="Logo 2">
+                <div class="options">
+                    <label><input type="radio" name="q2" value="a">Real Betis</label>
+                    <label><input type="radio" name="q2" value="b">Bayern Munich</label>
+                    <label><input type="radio" name="q2" value="c">FC Barcelona</label>
+                </div>
+            </div>
+            <br>
+            <div class="question">
+                <p>3. Which team does this logo represent?</p>
+                <img src="https://logos-world.net/wp-content/uploads/2020/06/Sevilla-Logo.png" alt="Logo 3">
+                <div class="options">
+                    <label><input type="radio" name="q3" value="a">Sevilla</label>
+                    <label><input type="radio" name="q3" value="b">Real Betis</label>
+                    <label><input type="radio" name="q3" value="c">Real Sociedad</label>
+                </div>
+            </div>
+            <input type="button" value="Submit" class="submit-btn" onclick="showResult()">
+            <a href="index.html" class="byebyebutton">Close</a>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function calculateMarks() {
+            var marks = 0;
+            var quizForm = document.getElementById("quizForm");
+            var answer1 = quizForm.q1.value;
+            var answer2 = quizForm.q2.value;
+            var answer3 = quizForm.q3.value;
+
+            if (answer1 === "b") {
+                marks += 10;
+            }
+            if (answer2 === "c") {
+                marks += 10;
+            }
+            if (answer3 === "a") {
+                marks += 10;
+            }
+
+            return marks;
+        }
+
+        function showResult() {
+            var marks = calculateMarks();
+            var resultContainer = document.getElementById("result");
+            resultContainer.innerHTML = "<h2>Your Marks: " + marks + "/30</h2>";
+            alert("Your Marks: " + marks + "/30");
+        }
+    </script>
+</body>
+
+</html>

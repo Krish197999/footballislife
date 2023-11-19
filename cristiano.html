@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cristiano Ronaldo</title>
+    <style>
+        body {
+            background-color: black;
+            font-size: 20px;
+            color: beige;
+            padding-bottom: 50px;
+        }
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid rebeccapurple;
+            padding-bottom: 30px;
+            padding: auto;
+        }
+        .image-container {
+            text-align: center;
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            border: 7px solid #D6FF08;
+            border-radius: 20px;
+        }
+
+        .info {
+            text-align: center;
+            margin: 20px;
+        }
+
+        /* Dropdown section styles */
+        .dropdown {
+            text-align: center;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .dropdown select {
+            padding: 10px;
+            border: 2px solid #D6FF08;
+            border-radius: 5px;
+            background-color: black;
+            color: beige;
+            font-size: 16px;
+            width: 250px;
+            transition: border-color 0.3s;
+        }
+
+        .dropdown select:hover {
+            border-color: rebeccapurple; /* Highlight border on hover */
+        }
+
+        /* Content section styles */
+        .club-info {
+            text-align: center;
+            margin-top: 20px;
+            display: none; /* Hide club info by default */
+        }
+
+        /* Styling for the back button */
+        .back-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-button a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #D6FF08;
+            color: black;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .back-button a:hover {
+            background-color: #444;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cristiano Ronaldo</h1>
+
+    <div class="image-container">
+        <img src="https://staticg.sportskeeda.com/editor/2017/12/1042c-1513536016-800.jpg" alt="Cristiano Ronaldo">
+    </div>
+
+    <div class="info">
+        <h2>About Cristiano Ronaldo</h2>
+        <p>Cristiano Ronaldo is one of the greatest footballers of all time. He has won numerous awards and accolades throughout his career, including multiple FIFA Ballon d'Or awards.</p>
+        <p>He has played for several top clubs, including Sporting CP, Manchester United, Real Madrid, Juventus, and most recently, he returned to Manchester United.</p>
+        <p>Ronaldo has scored over 850 goals for his club teams and is also the all-time leading scorer for the Portuguese national team.</p>
+    </div>
+
+    <!-- Dropdown sections -->
+    <div class="dropdown">
+        <select id="club-dropdown">
+            <option value="none">Select a Club</option>
+            <option value="sporting-cp">Sporting CP</option>
+            <option value="manchester-united">Manchester United</option>
+            <option value="real-madrid">Real Madrid</option>
+            <option value="juventus">Juventus</option>
+            <option value="al-nassr">Al Nassr</option>
+            <option value="portugal">Portugal</option>
+        </select>
+    </div>
+
+    <!-- Content sections for each club -->
+    <div class="club-info" id="sporting-cp-info">
+        <img src="https://d3nfwcxd527z59.cloudfront.net/content/uploads/2021/06/03103729/Cristiano-Ronaldo-Sporting-Manchester-United.jpg" alt="Sporting CP">
+        <h3>Sporting CP</h3>
+        <p>Matches Played: 31</p>
+        <p>Goals Scored: 5</p>
+        <p>Trophies Earned: 1</p>
+        <!-- Add more information as needed -->
+    </div>
+
+    <div class="club-info" id="manchester-united-info">
+        <img src="https://icdn.caughtoffside.com/wp-content/uploads/2022/05/Man-United-Brentford-Cristiano-Ronaldo-7.jpg" alt="Manchester United">
+        <h3>Manchester United</h3>
+        <p>Matches Played: 346</p>
+        <p>Goals Scored: 145</p>
+        <p>Trophies Earned: 4</p>
+        <!-- Add more information as needed -->
+    </div>
+
+    <div class="club-info" id="real-madrid-info">
+        <img src="https://sportshub.cbsistatic.com/i/2018/04/03/25bd819e-b478-42db-9a50-8227291664b6/ronaldo-bicycle-kick-goal-real-madrid.jpg" alt="Real Madrid">
+        <h3>Real Madrid</h3>
+        <p>Matches Played: 439</p>
+        <p>Goals Scored: 450</p>
+        <p>Trophies Earned: 12</p>
+        <!-- Add more information as needed -->
+    </div>
+
+    <div class="club-info" id="juventus-info">
+        <img src="https://e0.365dm.com/20/07/2048x1152/skysports-cristiano-ronaldo_5050722.jpg" alt="Juventus">
+        <h3>Juventus</h3>
+        <p>Matches Played: 134</p>
+        <p>Goals Scored: 101</p>
+        <p>Trophies Earned: 5</p>
+        <!-- Add more information as needed -->
+    </div>
+
+    <div class="club-info" id="al-nassr-info">
+        <img src="https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/blt4b22345d697982c1/64e995dcb2ec2a4e9f11b74a/Cristiano_Ronaldo_Al-Nassr_2023-24_(2).jpg?auto=webp&format=pjpg&width=3840&quality=60" alt="Al Nassr">
+        <h3>Al Nassr</h3>
+        <p>Matches Played: 36</p>
+        <p>Goals Scored: 49</p>
+        <p>Trophies Earned: 1</p>
+        <!-- Add more information as needed -->
+    </div>
+
+    <div class="club-info" id="portugal-info">
+        <img src="https://images.indianexpress.com/2023/03/ronaldo-portugal.jpg" alt="Portugal">
+        <h3>Portugal</h3>
+        <p>Matches Played: 200</p>
+        <p>Goals Scored: 150</p>
+        <p>Trophies Earned: 2</p>
+        <!-- Add more information as needed -->
+    </div>
+
+    <div class="back-button">
+        <a href="project.html">Back</a>
+    </div>
+
+    <script>
+        // JavaScript to show/hide club info based on dropdown selection
+        document.getElementById("club-dropdown").addEventListener("change", function() {
+            const selectedClub = this.value;
+            const clubInfos = document.querySelectorAll(".club-info");
+            
+            clubInfos.forEach((clubInfo) => {
+                clubInfo.style.display = "none"; // Hide all club info sections
+            });
+            
+            if (selectedClub !== "none") {
+                document.getElementById(selectedClub + "-info").style.display = "block"; // Show the selected club info
+            }
+        });
+    </script>
+</body>
+</html>

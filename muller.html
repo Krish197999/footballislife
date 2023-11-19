@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gerd Muller</title>
+    <style>
+        body {
+            background-color: black;
+            font-size: 20px;
+            color: beige;
+            padding-bottom: 50px;
+        }
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid rebeccapurple;
+            padding-bottom: 30px;
+            padding: auto;
+        }
+        .image-container {
+            text-align: center;
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            border: 7px solid #D6FF08;
+            border-radius: 20px;
+        }
+
+        .info {
+            text-align: center;
+            margin: 20px;
+        }
+
+        /* Dropdown section styles */
+        .dropdown {
+            text-align: center;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .dropdown select {
+            padding: 10px;
+            border: 2px solid #D6FF08;
+            border-radius: 5px;
+            background-color: black;
+            color: beige;
+            font-size: 16px;
+            width: 250px;
+            transition: border-color 0.3s;
+        }
+
+        .dropdown select:hover {
+            border-color: rebeccapurple; /* Highlight border on hover */
+        }
+
+        /* Content section styles */
+        .club-info {
+            text-align: center;
+            margin-top: 20px;
+            display: none; /* Hide club info by default */
+        }
+
+        /* Styling for the back button */
+        .back-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-button a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #D6FF08;
+            color: black;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .back-button a:hover {
+            background-color: #444;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gerd Muller</h1>
+
+    <div class="image-container">
+        <img src="https://i.guim.co.uk/img/media/2a9435926d21f60ae6eba37043d0596482133ddc/115_207_2133_1280/master/2133.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=e49cbb29f152aa026428013b85596377" alt="Gerd Muller">
+    </div>
+
+    <div class="info">
+        <h2>About Gerd Muller</h2>
+        <p>Gerd Müller, known as "Der Bomber," was a legendary German footballer celebrated for his exceptional goal-scoring prowess.</p>
+        <p>He played the majority of his career at Bayern Munich and was renowned for his remarkable finishing ability, netting 68 goals in 62 appearances for the German national team.</p>
+        <p>Müller's incredible goal-scoring record stood out, earning him admiration as one of the greatest strikers in football history.</p>
+    </div>
+
+    <!-- Dropdown sections -->
+    <div class="dropdown">
+        <select id="club-dropdown">
+            <option value="none">Select a Club</option>
+            <option value="bayern-munich">Bayern Munich</option>
+            <option value="germany">Germany</option>
+        </select>
+    </div>
+
+    <!-- Content sections for each club -->
+    <div class="club-info" id="bayern-munich-info">
+        <img src="https://tmssl.akamaized.net/images/foto/galerie/gerd-muller-1971-1567776368-25459.jpg?lm=1567776396" alt="Bayern Munich">
+        <h3>Bayern Munich</h3>
+        <p>Matches Played: 500</p>
+        <p>Goals Scored: 523</p>
+        <p>Trophies Earned: 9</p>
+        <!-- Add more information as needed -->
+    </div>
+
+    <div class="club-info" id="germany-info">
+        <img src="https://www.realmadrid.com/img/horizontalsc_940px/web_muller_20210815023517.jpg" alt="Germany">
+        <h3>Germany</h3>
+        <p>Matches Played: 62</p>
+        <p>Goals Scored: 68</p>
+        <p>Trophies Earned: 2</p>
+        <!-- Add more information as needed -->
+    </div>
+
+   
+    <div class="back-button">
+        <a href="index.html">Back</a>
+    </div>
+
+    <script>
+        // JavaScript to show/hide club info based on dropdown selection
+        document.getElementById("club-dropdown").addEventListener("change", function() {
+            const selectedClub = this.value;
+            const clubInfos = document.querySelectorAll(".club-info");
+            
+            clubInfos.forEach((clubInfo) => {
+                clubInfo.style.display = "none"; // Hide all club info sections
+            });
+            
+            if (selectedClub !== "none") {
+                document.getElementById(selectedClub + "-info").style.display = "block"; // Show the selected club info
+            }
+        });
+    </script>
+</body>
+</html>
